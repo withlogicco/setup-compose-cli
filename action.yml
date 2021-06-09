@@ -1,0 +1,14 @@
+name: Set up Compose CLI
+description: Sets up the Docker Compose CLI
+inputs:
+  version:
+    description: The version of Docker Compose CLI to install
+    required: false
+    default: '1.0.17'
+runs:
+  using: "composite"
+  steps:
+    - run: curl -L https://raw.githubusercontent.com/docker/compose-cli/v${{ inputs.version }}/scripts/install/install_linux.sh | sh
+      shell: bash
+      env:
+        DOWNLOAD_URL: https://github.com/docker/compose-cli/releases/download/v${{ inputs.version }}/docker-linux-amd64
