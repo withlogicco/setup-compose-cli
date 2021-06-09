@@ -1,5 +1,8 @@
 name: Set up Compose CLI
 description: Sets up the Docker Compose CLI
+branding:
+  icon: play
+  color: blue
 inputs:
   version:
     description: The version of Docker Compose CLI to install
