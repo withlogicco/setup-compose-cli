@@ -7,7 +7,7 @@ inputs:
   version:
     description: The version of Docker Compose CLI to install
     required: false
-    default: '1.0.17'
+    default: '1.0.23'
 runs:
   using: "composite"
   steps:
